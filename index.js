@@ -13,6 +13,11 @@ console.log(dataFile)
 app.use(express.json());
 
 // Define a route to get data from the JSON database
+app.get('/', (req, res) => {
+    res.send("Live...")
+});
+
+// Define a route to get data from the JSON database
 app.get('/storybook/:storyId', (req, res) => {
   jsonfile.readFile(dataFile, (err, data) => {
     if (err) {
