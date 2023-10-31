@@ -2,7 +2,7 @@ const express = require('express');
 const jsonfile = require('jsonfile');
 const app = express();
 const { v4: uuidv4 } = require('uuid'); // Import the v4 function from uuid
-const port = 3000;
+const port = process.env.PORT || 3000;
 const dataFile = 'storybookDb/storybookDb.json';
 const cors = require('cors'); // Import the 'cors' middleware
 
